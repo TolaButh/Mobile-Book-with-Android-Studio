@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_layout"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".AddActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title_add"
+        android:text="เพิ่มเพื่อน"
+        android:textColor="#00FFFF"
+        android:textStyle="bold"
+        android:fontFamily="@font/promt"
+        android:textSize="20sp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/profile"
+        android:id="@+id/img_profile"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_add"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        app:civ_border_color="#7cefd4"
+        app:civ_border_width="4dp"
+
+
+        />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ip_layout_name"
+        app:layout_constraintTop_toBottomOf="@id/img_profile"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ip_edt_name"
+            android:fontFamily="@font/promt"
+            android:background="@color/white"
+            android:textSize="18sp"
+            android:hint="ป้อนชื่อเพื่อน"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ip_layout_mobile"
+        app:layout_constraintTop_toBottomOf="@id/ip_layout_name"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ip_edt_mobile"
+            android:fontFamily="@font/promt"
+            android:background="@color/white"
+            android:textSize="18sp"
+            android:inputType="numberDecimal"
+            android:hint="ป้อนโทรศัพย์เพื่อน"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_add"
+        android:text="เพิ่ม"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/ip_layout_mobile"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"
+        app:cornerRadius="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
